@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="lo">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Laovegas — ຕິດຕັ້ງແອັບ iOS</title>
+  <link rel="apple-touch-icon" href="./icon.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="theme-color" content="#000000">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html, body { background: #000; color: #fff; font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Noto Sans Lao', sans-serif; }
+    .squircle { border-radius: 28px; }
+    .card-bg { background-size: cover; background-position: center; }
+    body { -webkit-tap-highlight-color: transparent; }
+    .pill-blue { background: #0A84FF; }
+    .scroll-snap { scroll-snap-type: x mandatory; }
+    .scroll-snap > * { scroll-snap-align: start; }
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+  </style>
+</head>
+<body class="min-h-screen px-4 pt-6 pb-24">
+  <div class="flex items-start gap-4 mb-4">
+    <div class="shrink-0 w-[120px] h-[120px] squircle overflow-hidden bg-black shadow-lg flex items-center justify-center">
+      <img src="./icon.png" alt="Laovegas" class="w-full h-full object-cover">
+    </div>
+    <div class="flex-1 min-w-0 pt-1">
+      <h1 class="text-[28px] leading-tight font-bold truncate">Laovegas</h1>
+      <p class="text-[15px] text-neutral-400 mt-0.5">ເກມອອນລາຍ · ຄາຊີໂນ · ສະລັອດ</p>
+      <div class="flex items-center gap-2 mt-3">
+        <a href="./laovegas.mobileconfig" id="installBtn"
+           class="px-5 py-1.5 rounded-full pill-blue text-white text-[15px] font-semibold active:opacity-70">
+          ຕິດຕັ້ງຟຣີ
+        </a>
+        <button aria-label="help" onclick="alert('ຕິດຕໍ່ທີມງານຫາກຕິດຕັ້ງບໍ່ສຳເລັດ')"
+                class="w-8 h-8 rounded-full bg-neutral-800 text-neutral-400 flex items-center justify-center text-[15px]">
+          ?
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div id="statusHint" class="hidden mb-4 p-3 rounded-xl bg-blue-500/10 border border-blue-500/30 text-xs text-blue-300 leading-relaxed">
+    <div class="font-bold text-blue-200 mb-2">📥 ກຳລັງດາວໂຫລດ... ເຮັດຕາມ 2 ຂັ້ນຕອນ:</div>
+    <div class="space-y-1.5">
+      <div><b>1.</b> Settings → General → VPN &amp; Device Management → ຕິດຕັ້ງ <b>Laovegas</b></div>
+      <div><b>2.</b> ກົດໄອຄອນ <b>Laovegas</b> ໜ້າຈໍ → ເຂົ້າເລ່ນໄດ້ເລີຍ <span class="text-emerald-300">(ບໍ່ຕ້ອງເປີດ VPN)</span></div>
+    </div>
+  </div>
+
+  <div class="grid grid-cols-3 divide-x divide-neutral-800 my-4">
+    <div class="text-center">
+      <div class="text-[28px] font-bold leading-none">4.9</div>
+      <div class="my-1 flex justify-center gap-px">
+        <svg width="14" height="14" viewBox="0 0 20 20"><path d="M10 1l2.6 6 6.4.5-4.9 4.2 1.5 6.3L10 14.8 4.4 18l1.5-6.3L1 7.5 7.4 7z" fill="#FFB800"/></svg>
+        <svg width="14" height="14" viewBox="0 0 20 20"><path d="M10 1l2.6 6 6.4.5-4.9 4.2 1.5 6.3L10 14.8 4.4 18l1.5-6.3L1 7.5 7.4 7z" fill="#FFB800"/></svg>
+        <svg width="14" height="14" viewBox="0 0 20 20"><path d="M10 1l2.6 6 6.4.5-4.9 4.2 1.5 6.3L10 14.8 4.4 18l1.5-6.3L1 7.5 7.4 7z" fill="#FFB800"/></svg>
+        <svg width="14" height="14" viewBox="0 0 20 20"><path d="M10 1l2.6 6 6.4.5-4.9 4.2 1.5 6.3L10 14.8 4.4 18l1.5-6.3L1 7.5 7.4 7z" fill="#FFB800"/></svg>
+        <svg width="14" height="14" viewBox="0 0 20 20"><path d="M10 1l2.6 6 6.4.5-4.9 4.2 1.5 6.3L10 14.8 4.4 18l1.5-6.3L1 7.5 7.4 7z" fill="#FFB800"/></svg>
+      </div>
+      <div class="text-[11px] text-neutral-500">10,000+ ຄະແນນ</div>
+    </div>
+    <div class="text-center">
+      <div class="text-[28px] font-bold leading-none">#1</div>
+      <div class="text-[11px] text-neutral-500 mt-2.5">ອັນດັບ 1 ໃນລາວ</div>
+    </div>
+    <div class="text-center">
+      <div class="text-[28px] font-bold leading-none">18+</div>
+      <div class="text-[11px] text-neutral-500 mt-2.5">ອາຍຸ</div>
+    </div>
+  </div>
+
+  <h2 class="text-[19px] font-bold mt-6 mb-3">ພາບໜ້າຈໍ</h2>
+  <div class="-mx-4 px-4 flex gap-3 overflow-x-auto scroll-snap no-scrollbar pb-2">
+    <div class="shrink-0 w-[260px] h-[480px] rounded-[20px] overflow-hidden card-bg relative shadow-xl"
+         style="background-image: url(./gamescreen.png);">
+      <div class="absolute inset-0 p-5 flex flex-col">
+        <div class="font-bold text-[22px] leading-tight text-white drop-shadow-md">ເກມຄົບທຸກຄ່າຍ</div>
+        <div class="text-[14px] text-white/90 mt-1.5 drop-shadow-md">AMB · GCLUB · ສະລັອດ · ບາຄາລາ</div>
+      </div>
+    </div>
+    <div class="shrink-0 w-[260px] h-[480px] rounded-[20px] overflow-hidden card-bg relative shadow-xl"
+         style="background-image: url(./dooballsod.png);">
+      <div class="absolute inset-0 p-5 flex flex-col">
+        <div class="font-bold text-[22px] leading-tight text-white drop-shadow-md">ເບິ່ງບານສົດ</div>
+        <div class="text-[14px] text-white/90 mt-1.5 drop-shadow-md">ຖ່າຍທອດສົດບານເຕະຈາກທົ່ວໂລກ + Live Chat</div>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="text-[19px] font-bold mt-6 mb-3">ລາຍລະອຽດ</h2>
+  <p class="text-[14px] text-neutral-300 leading-relaxed">
+    ແອັບ Laovegas ເປີດເລ່ນເກມອອນລາຍ ຝາກ-ຖອນອັດຕະໂນມັດ 24 ຊົ່ວໂມງ
+    ຜ່ານ BCEL One · ສະລັອດ · ບາຄາລາ · ຄາຊີໂນສົດ
+  </p>
+
+  <h2 class="text-[19px] font-bold mt-6 mb-3">ຂໍ້ມູນ</h2>
+  <ul class="text-[14px] text-neutral-300 space-y-2">
+    <li class="flex justify-between"><span class="text-neutral-500">ຜູ້ພັດທະນາ</span><span>Laovegas</span></li>
+    <li class="flex justify-between"><span class="text-neutral-500">ຂະໜາດ</span><span>100 KB</span></li>
+    <li class="flex justify-between"><span class="text-neutral-500">ໝວດໝູ່</span><span>ເກມ · ບັນເທີງ</span></li>
+    <li class="flex justify-between"><span class="text-neutral-500">ຮອງຮັບ iOS</span><span>iOS 12.0+</span></li>
+    <li class="flex justify-between"><span class="text-neutral-500">ພາສາ</span><span>ລາວ, ໄທ, English</span></li>
+  </ul>
+
+  <div class="fixed bottom-0 inset-x-0 bg-black/95 backdrop-blur-md border-t border-neutral-800 py-3 text-center text-[13px] text-neutral-400">
+    ບໍລິການລູກຄ້າ Laovegas · 24 ຊົ່ວໂມງ
+  </div>
+
+  <script>
+    document.getElementById('installBtn').addEventListener('click', function() {
+      document.getElementById('statusHint').classList.remove('hidden');
+    });
+  </script>
+</body>
+</html>
